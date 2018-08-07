@@ -3,14 +3,25 @@
 <head>
 	<title>Japanase big block</title>
 </head>
-<body>
-	<div>
-		<h1><a href="/">Japanase Big Block Engines</a></h1>
-	</div>
-	<div>
-		<p><a href="">2JZ ENGINE</a></p>
-		<p>Builted on Japan, this engine came to destroy the RB26DETT from Nissan, and Toyota got it as you can see.</p>
-	</div>
-
-</body>
+	<body>
+		<div>
+			<h1><a href="/">Japanase Big Block Engines</a></h1>
+		</div>
+		<div>
+			<p><a href="">2JZ ENGINE</a></p>
+			<p>Builted on Japan, this engine came to destroy the RB26DETT from Nissan, and Toyota got it as you can see.</p>
+		</div>
+		<div>
+			<p>
+				{% for post in posts %}
+					<div>
+		        		<p>published: {{ post.published_date }}</p>
+		        		<h1><a href="">{{ post.title }}</a></h1>
+		        		<p>{{ post.text|linebreaksbr }}</p>
+		    		</div>
+				{% endfor %}
+			</p>
+		</div>
+		
+	</body>
 </html>
